@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script type="text/javascript"	src="./index.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container">
+		<header class="d-flex p-3 mt-3 bg-dark text-light justify-content-center">
+				<h1>Convertidor de HEIC a JPG/PNG</h1>
+		</header>
+
+		<div class="row mt-2">
+			<div class="col shadow p-3 mb-5 bg-white rounded">
+				
+				<form action="/toConvertir" method="POST">
+					<ul class="list-group">
+						<li class="list-group-item">
+							<p class="d-inline"> 1.</p> <input type="file" id="fitxers" name="fitxers" class="form-control d-inline" multiple>
+						</li>
+						<li class="list-group-item">
+							2. Seleccionar format de sortida: 
+							<input type="radio" class="btn-check mr-5" name="format" id="option1" value="PNG">
+							<label id="labelPNG" class="btn btn-secondary" for="option1" onClick="posarVermell('png')">PNG</label>
+							
+							<input type="radio" class="btn-check" name="format" id="option2" value="JPEG">
+							<label id="labelJPG" class="btn btn-secondary" for="option2" onClick="posarVermell('jpg')">JPEG</label>
+						</li>
+						<li class="list-group-item">
+							<!-- 3. <button type="submit" class="btn btn-primary" onClick="convertir()">Convertir</button> -->
+							3. <button type="submit" class="btn btn-primary">Convertir</button>
+						</li>
+					</ul>
+					
+
+				</form>
+	
+			</div>
+
+
+			<div class="col pa-3">
+				<div id="resultat" class="mt-5"></div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
